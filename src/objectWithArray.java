@@ -21,4 +21,8 @@ public class objectWithArray {
 			}while(!correctInput);
 		}
 	}
+
+	public objectWithArray(int[] array) {
+		intArray = array;
+	}
 }

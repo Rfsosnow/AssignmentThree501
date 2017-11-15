@@ -11,4 +11,9 @@ public class objectReferencesObject {
 		objectTwo = new simpleObject(scan);
 	}
 
+	public objectReferencesObject(simpleObject simpleOne, simpleObject simpleTwo) {
+		objectOne = simpleOne;
+		objectTwo = simpleTwo;
+	}
+
 }

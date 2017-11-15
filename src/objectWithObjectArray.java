@@ -10,4 +10,8 @@ public class objectWithObjectArray {
 			objectArray[i] = new simpleObject(scan);
 		}
 	}
+
+	public objectWithObjectArray(simpleObject[] objectArray2) {
+		objectArray = objectArray2;
+	}
 }

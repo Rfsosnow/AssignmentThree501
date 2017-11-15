@@ -4,6 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.IdentityHashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 
@@ -15,6 +16,14 @@ public class Serializer {
 	Map<Object,Integer> objectMap = new IdentityHashMap<Object,Integer>();
 
 	Serializer() {}
+	
+	public Document serialize(List<Object> objectList){
+		for(int i =1;i<objectList.size();i++){
+			addToQueue(objectList.get(i));
+		}
+		Document doc = serialize(objectList.get(0));
+		return doc;
+	}
 	
 	public Document serialize(Object obj){
 		

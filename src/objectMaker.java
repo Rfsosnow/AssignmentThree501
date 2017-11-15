@@ -53,7 +53,7 @@ public class objectMaker {
 		
 		
 		Serializer serializer = new Serializer();
-		Document doc = serializer.serialize(createdObjects.get(0));
+		Document doc = serializer.serialize(createdObjects);
 		XMLOutputter xmOut = new XMLOutputter();
 		xmOut.setFormat(Format.getPrettyFormat());
 		

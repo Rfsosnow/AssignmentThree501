@@ -5,6 +5,11 @@ public class simpleObject {
 	public String testString = "Test String";
 	public String stringField;
 	
+	public simpleObject(int i, String m){
+		intField = i;
+		stringField = m;
+	}
+	
 	public simpleObject(Scanner scan) {
 		System.out.println("Creating simple object. \n");
 		boolean correctInput = false;
