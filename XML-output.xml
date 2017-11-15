@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serialized>
+  <Object Class="objectReferencesObject" id="0">
+    <field name="objectOne" declaringclass="objectReferencesObject">
+      <reference>1</reference>
+    </field>
+    <field name="objectTwo" declaringclass="objectReferencesObject">
+      <reference>2</reference>
+    </field>
+  </Object>
+  <Object Class="simpleObject" id="1">
+    <field name="intField" declaringclass="simpleObject">
+      <value>123</value>
+    </field>
+    <field name="testString" declaringclass="simpleObject">
+      <value>Test String</value>
+    </field>
+    <field name="stringField" declaringclass="simpleObject">
+      <value>asd</value>
+    </field>
+  </Object>
+  <Object Class="simpleObject" id="2">
+    <field name="intField" declaringclass="simpleObject">
+      <value>123</value>
+    </field>
+    <field name="testString" declaringclass="simpleObject">
+      <value>Test String</value>
+    </field>
+    <field name="stringField" declaringclass="simpleObject">
+      <value>asd</value>
+    </field>
+  </Object>
+</serialized>

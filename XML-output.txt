@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serialized>
+  <Object Class="simpleObject" id="3">
+    <field name="intField" declaringclass="simpleObject">
+      <value>123</value>
+    </field>
+    <field name="testString" declaringclass="simpleObject">
+      <value>Test String</value>
+    </field>
+    <field name="stringField" declaringclass="simpleObject">
+      <value>asd</value>
+    </field>
+  </Object>
+  <Object Class="objectReferencesObject" id="0">
+    <field name="objectOne" declaringclass="objectReferencesObject">
+      <reference>4</reference>
+    </field>
+    <field name="objectTwo" declaringclass="objectReferencesObject">
+      <reference>5</reference>
+    </field>
+  </Object>
+  <Object Class="objectWithArray" id="1">
+    <field name="intArray" declaringclass="objectWithArray">
+      <reference>6</reference>
+    </field>
+  </Object>
+  <Object Class="objectWithObjectArray" id="2">
+    <field name="objectArray" declaringclass="objectWithObjectArray">
+      <reference>7</reference>
+    </field>
+  </Object>
+  <Object Class="simpleObject" id="4">
+    <field name="intField" declaringclass="simpleObject">
+      <value>1</value>
+    </field>
+    <field name="testString" declaringclass="simpleObject">
+      <value>Test String</value>
+    </field>
+    <field name="stringField" declaringclass="simpleObject">
+      <value>2</value>
+    </field>
+  </Object>
+  <Object Class="simpleObject" id="5">
+    <field name="intField" declaringclass="simpleObject">
+      <value>3</value>
+    </field>
+    <field name="testString" declaringclass="simpleObject">
+      <value>Test String</value>
+    </field>
+    <field name="stringField" declaringclass="simpleObject">
+      <value>four</value>
+    </field>
+  </Object>
+  <Object Class="[I" id="6" Length="3">
+    <value>1</value>
+    <value>2</value>
+    <value>3</value>
+  </Object>
+  <Object Class="[LsimpleObject;" id="7" Length="4">
+    <Object Class="simpleObject" id="8">
+      <field name="intField" declaringclass="simpleObject">
+        <value>1</value>
+      </field>
+      <field name="testString" declaringclass="simpleObject">
+        <value>Test String</value>
+      </field>
+      <field name="stringField" declaringclass="simpleObject">
+        <value>one</value>
+      </field>
+    </Object>
+    <Object Class="simpleObject" id="9">
+      <field name="intField" declaringclass="simpleObject">
+        <value>2</value>
+      </field>
+      <field name="testString" declaringclass="simpleObject">
+        <value>Test String</value>
+      </field>
+      <field name="stringField" declaringclass="simpleObject">
+        <value>two</value>
+      </field>
+    </Object>
+    <Object Class="simpleObject" id="10">
+      <field name="intField" declaringclass="simpleObject">
+        <value>3</value>
+      </field>
+      <field name="testString" declaringclass="simpleObject">
+        <value>Test String</value>
+      </field>
+      <field name="stringField" declaringclass="simpleObject">
+        <value>three</value>
+      </field>
+    </Object>
+    <Object Class="simpleObject" id="11">
+      <field name="intField" declaringclass="simpleObject">
+        <value>4</value>
+      </field>
+      <field name="testString" declaringclass="simpleObject">
+        <value>Test String</value>
+      </field>
+      <field name="stringField" declaringclass="simpleObject">
+        <value>four</value>
+      </field>
+    </Object>
+  </Object>
+</serialized>

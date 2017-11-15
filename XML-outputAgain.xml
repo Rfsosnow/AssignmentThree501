@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serialized>
+  <Object Class="objectReferencesObject" id="2">
+    <field name="objectOne" declaringclass="objectReferencesObject">
+      <reference>3</reference>
+    </field>
+    <field name="objectTwo" declaringclass="objectReferencesObject">
+      <reference>4</reference>
+    </field>
+  </Object>
+  <Object Class="simpleObject" id="0">
+    <field name="intField" declaringclass="simpleObject">
+      <value>123</value>
+    </field>
+    <field name="testString" declaringclass="simpleObject">
+      <value>Test String</value>
+    </field>
+    <field name="stringField" declaringclass="simpleObject">
+      <value>asd</value>
+    </field>
+  </Object>
+  <Object Class="simpleObject" id="1">
+    <field name="intField" declaringclass="simpleObject">
+      <value>123</value>
+    </field>
+    <field name="testString" declaringclass="simpleObject">
+      <value>Test String</value>
+    </field>
+    <field name="stringField" declaringclass="simpleObject">
+      <value>asd</value>
+    </field>
+  </Object>
+  <Object Class="simpleObject" id="4">
+    <field name="intField" declaringclass="simpleObject">
+      <value>123</value>
+    </field>
+    <field name="testString" declaringclass="simpleObject">
+      <value>Test String</value>
+    </field>
+    <field name="stringField" declaringclass="simpleObject">
+      <value>asd</value>
+    </field>
+  </Object>
+  <Object Class="simpleObject" id="4">
+    <field name="intField" declaringclass="simpleObject">
+      <value>123</value>
+    </field>
+    <field name="testString" declaringclass="simpleObject">
+      <value>Test String</value>
+    </field>
+    <field name="stringField" declaringclass="simpleObject">
+      <value>asd</value>
+    </field>
+  </Object>
+</serialized>

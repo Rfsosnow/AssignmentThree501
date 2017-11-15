@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -6,9 +7,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.jdom2.Document;
+import org.jdom2.JDOMException;
+import org.jdom2.input.SAXBuilder;
 import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
+import org.xml.sax.SAXException;
 
 
 public class objectMaker {
@@ -59,12 +67,39 @@ public class objectMaker {
 		
 		Writer writer;
 		try {
-			writer = new FileWriter("XML-output.txt");
+			writer = new FileWriter("XML-output.xml");
 			xmOut.output(doc, writer);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		File xmlFile = new File("XML-output.xml");
+		SAXBuilder saxBuilder = new SAXBuilder();
+		Document xmlRecreated = null;
+		try {
+			xmlRecreated = saxBuilder.build(xmlFile);
+		} catch (JDOMException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		deserializer undo = new deserializer();
+		List<Object> recreatedObjects = undo.deserialize(xmlRecreated);
+		
+		Serializer redoSerializer = new Serializer();
+		Document redo = redoSerializer.serialize(recreatedObjects);
+		try {
+			writer = new FileWriter("XML-outputAgain.xml");
+			xmOut.output(redo, writer);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
     }
 
 	private static void createObjectWCollection() {

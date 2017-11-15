@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serialized>
+  <Object Class="objectWithCollection" id="0">
+    <field name="objectCollection" declaringclass="objectWithCollection">
+      <reference>1</reference>
+    </field>
+  </Object>
+  <Object Class="java.util.ArrayList" id="1" />
+</serialized>
