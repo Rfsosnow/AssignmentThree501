@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class simpleObject {
-	int intField;
-	String testString = "Test String";
-	String stringField;
+	public int intField;
+	public String testString = "Test String";
+	public String stringField;
 	
 	public simpleObject(Scanner scan) {
 		System.out.println("Creating simple object. \n");

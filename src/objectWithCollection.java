@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class objectWithCollection {
-	List<simpleObject> objectCollection = new ArrayList<simpleObject>();
+	public List<simpleObject> objectCollection = new ArrayList<simpleObject>();
 	
 	objectWithCollection(Scanner scan){
 		System.out.println("Creating an object with a collection. \n");

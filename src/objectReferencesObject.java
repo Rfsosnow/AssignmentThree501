@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class objectReferencesObject {
-	simpleObject objectOne;
-	simpleObject objectTwo;
+	public simpleObject objectOne;
+	public simpleObject objectTwo;
 	
 	objectReferencesObject(Scanner scan){
 		System.out.println("Creating first simpleObject. \n");

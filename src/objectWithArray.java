@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class objectWithArray {
-	int[] intArray;
+	public int[] intArray;
 	
 	objectWithArray(Scanner scan, int length){
 		System.out.println("Creating Object with Array \n");

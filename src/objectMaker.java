@@ -1,6 +1,14 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import org.jdom2.Document;
+import org.jdom2.output.Format;
+import org.jdom2.output.XMLOutputter;
 
 
 public class objectMaker {
@@ -42,6 +50,21 @@ public class objectMaker {
 			userInputChar = userInput.charAt(0);
 		}
 		System.out.println("Finished created objects \n");
+		
+		
+		Serializer serializer = new Serializer();
+		Document doc = serializer.serialize(createdObjects.get(0));
+		XMLOutputter xmOut = new XMLOutputter();
+		xmOut.setFormat(Format.getPrettyFormat());
+		
+		Writer writer;
+		try {
+			writer = new FileWriter("XML-output.txt");
+			xmOut.output(doc, writer);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 
 	private static void createObjectWCollection() {
