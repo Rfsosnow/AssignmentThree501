@@ -98,7 +98,9 @@ public class Serializer {
 					try {
 						value = objectFields[i].get(obj);
 						fieldElement.addContent(new Element("value").setText(value.toString()));
-					} catch (IllegalArgumentException | IllegalAccessException e) {
+					} catch (IllegalArgumentException e) {
+						e.printStackTrace();
+					} catch (IllegalAccessException e) {
 						e.printStackTrace();
 					}
 					

@@ -1,7 +1,5 @@
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.DataInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -11,36 +9,47 @@ public class server {
 	public static void main(String[] args) {
 		ServerSocket server= null;
 		Socket socket = null;
-		File xmlFile = null;
-		DataOutputStream out = null;
+		DataInputStream fileIn = null;
 		
 		
 		try {
 			server = new ServerSocket(4444);
 			socket = server.accept();
-			xmlFile = new File("XML-output.txt");
-			out = new DataOutputStream(socket.getOutputStream());
+			fileIn = new DataInputStream(socket.getInputStream());
 		} catch (IOException e ) {
 			e.printStackTrace();
 		}
 		
-		
-		byte[] xmlFileSize = new byte[(int) xmlFile.length()];
-		FileInputStream fileIn;
+		int size = 0;
 		try {
-			fileIn = new FileInputStream(xmlFile);
-			fileIn.read(xmlFileSize);
-			fileIn.close();
-			out.writeInt(xmlFileSize.length);
-			out.write(xmlFileSize );
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			size = fileIn.readInt();
+			System.out.println("client sent file size");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
+		System.out.println("Got size of file: "+size);
+		
+		if(size>0) {
+			byte[] xmlReceived = new byte[size];
+			try {
+				fileIn.readFully(xmlReceived, 0, size);
+				System.out.println(xmlReceived);
+				FileOutputStream outFile = null;
+				try {
+					
+					//CHANGE FILE LOCATION EVERY TIME
+					outFile = new FileOutputStream("U:\\Eclipse\\eclipseWorkSpace\\server\\src\\server\\XML-received.txt");
+				
+					outFile.write(xmlReceived);
+				}finally {
+					outFile.close();
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 		try {
-			out.close();
 			socket.close();
 			server.close();
 		} catch (IOException e) {
